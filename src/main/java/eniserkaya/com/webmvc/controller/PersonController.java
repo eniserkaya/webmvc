@@ -12,8 +12,8 @@ import java.util.List;
 @RequestMapping("/person")
 public class PersonController {
 
-    @PostMapping("/addPerson")
-    public List<Person> addPerson(@RequestBody List<Person> person) {
+    @PostMapping("/yasaBirEkle")
+    public List<Person> yasaBirEkle(@RequestBody List<Person> person) {
         person.forEach(p -> p.setYas(p.getYas() + 1));
         return person;
     }
