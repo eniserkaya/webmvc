@@ -8,6 +8,10 @@ public class TCKimlikNoValidator implements ConstraintValidator<TCKimlikNo, Stri
    }
 
    public boolean isValid(String tcKimlikNo, ConstraintValidatorContext context) {
+
+      if(tcKimlikNo.length() != 11)
+         return false;
+
       int sumAllNumbers = 0;
       int sumOdd = 0;
       int sumEven = 0;
